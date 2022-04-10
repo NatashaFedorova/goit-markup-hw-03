@@ -14,6 +14,7 @@
   --bg-accent-button-color: #188ce8;
   --main-font-family: 'Roboto', sans-serif;
   --logo-font-family: 'Raleway', sans-serif;
+  --main-gap: 30px;
 }
 /*===================global style reset==================== */
 p,
@@ -166,7 +167,7 @@ body {
 }
 .hero .title {
   color: var(--light-color);
-  margin-bottom: 30px;
+  margin-bottom: var(--main-gap);
   max-width: 696px;
   font-weight: 900;
   font-size: 44px;
@@ -198,12 +199,11 @@ body {
 }
 .list-features {
   display: flex;
+  margin-right: calc(-1 * var(--main-gap));
 }
 .item-features {
-  width: 270px;
-}
-.item-features:not(:last-child) {
-  margin-right: 30px;
+  flex-basis: calc(100% / 4 - var(--main-gap));
+  margin-right: var(--main-gap);
 }
 .title-features {
   margin-bottom: 10px;
@@ -216,7 +216,7 @@ body {
   display: flex;
 }
 .item-activity:not(:last-child) {
-  margin-right: 30px;
+  margin-right: var(--main-gap);
 }
 .title-activity {
   margin-bottom: 50px;
@@ -227,19 +227,21 @@ body {
 }
 .list-team {
   display: flex;
+  margin-right: calc(-1 * var(--main-gap));
 }
-.team-card {
+.team-card-item {
+  flex-basis: calc(100% / 4 - var(--main-gap));
+  margin-right: var(--main-gap);
   background-color: var(--bg-main-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  width: 270px;
 }
-.team-card:not(:last-child) {
-  margin-right: 30px;
+.team-card {
+  margin-right: var(--main-gap);
 }
-.team-card-down-part {
-  padding: 30px;
+.team-card-content {
+  padding: var(--main-gap);
 }
 .title-team {
   margin-bottom: 50px;
@@ -257,6 +259,7 @@ body {
   text-align: center;
 }
 /*==================portfolio===================== */
+
 .filter {
   margin-bottom: 34px;
 }
@@ -266,6 +269,17 @@ body {
 }
 .item-filter:not(:last-child) {
   margin-right: 8px;
+}
+.list-example {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--main-gap));
+  margin-bottom: calc(-1 * var(--main-gap));
+}
+.item-example {
+  flex-basis: calc(100% / 3 - var(--main-gap));
+  margin-right: var(--main-gap);
+  margin-bottom: var(--main-gap);
 }
 .filter .button {
   padding: 6px 22px;
@@ -285,19 +299,19 @@ body {
 .list-example {
   display: flex;
   flex-wrap: wrap;
-}
-.item-example:not(:nth-child(3n + 3)) {
-  margin-right: 30px;
-}
-.item-example:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+  margin-right: calc(-1 * var(--main-gap));
+  margin-bottom: calc(-1 * var(--main-gap));
 }
 .item-example {
-  width: 370px;
-  border: 1px solid var(--border-card-color);
+  flex-basis: calc(100% / 3 - var(--main-gap));
+  margin-right: var(--main-gap);
+  margin-bottom: var(--main-gap);
 }
-.example-card-part-down {
+.example-card-content {
   padding: 20px 24px;
+  border-right: 1px solid var(--border-card-color);
+  border-bottom: 1px solid var(--border-card-color);
+  border-left: 1px solid var(--border-card-color);
 }
 .title-example {
   margin-bottom: 4px;
