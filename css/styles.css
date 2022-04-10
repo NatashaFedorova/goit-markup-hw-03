@@ -5,6 +5,8 @@
   --light-color: #ffffff;
   --light-alfa-color: rgba(255, 255, 255, 0.6);
   --dark-color: #000000;
+  --border-header-color: #ececec;
+  --border-card-color: #eeeeee;
   --bg-main-color: #ffffff;
   --bg-light-color: #f5f4fa;
   --bg-dark-color: #2f303a;
@@ -30,6 +32,8 @@ ol {
 }
 .image {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /*===================general==================== */
 body {
@@ -44,7 +48,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 .section {
   padding-top: 94px;
@@ -87,8 +90,7 @@ body {
   line-height: 1.17;
   text-align: center;
 }
-.studio .text,
-.portfolio .text {
+.text {
   line-height: 1.71;
   color: var(--secondary-color);
 }
@@ -100,24 +102,37 @@ body {
 }
 /*==================header===================== */
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-header-color);
 }
-.nav {
+.header .container {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+}
+.logo-header {
+  margin-right: 93px;
 }
 .logo-dark-header {
   color: var(--dark-color);
 }
+.list-nav {
+  display: flex;
+}
+.item-nav:not(:last-child) {
+  margin-right: 50px;
+}
 .list-contacts {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  margin-left: auto;
 }
+.item-contacts:first-child {
+  margin-right: 50px;
+}
+
 .link-nav,
 .link-contacts {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -142,7 +157,6 @@ body {
   background-color: var(--bg-dark-color);
 }
 .title-btn {
-  outline: 1px solid aqua;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,19 +175,35 @@ body {
   text-transform: uppercase;
 }
 .hero .button {
+  display: block;
+  height: 50px;
+  min-width: 200px;
+  border-color: var(--bg-accent-color);
   background-color: var(--bg-accent-color);
   color: var(--light-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
 }
 .hero .button:hover,
 .hero .button:focus {
+  border-color: var(--bg-accent-color);
   background-color: var(--bg-accent-button-color);
 }
 /*==================features===================== */
 .features.section {
   padding-bottom: 0;
+}
+.list-features {
+  display: flex;
+}
+.item-features {
+  width: 270px;
+}
+.item-features:not(:last-child) {
+  margin-right: 30px;
 }
 .title-features {
   margin-bottom: 10px;
@@ -184,7 +214,6 @@ body {
 /*==================activity===================== */
 .list-activity {
   display: flex;
-  flex-direction: row;
 }
 .item-activity:not(:last-child) {
   margin-right: 30px;
@@ -198,7 +227,6 @@ body {
 }
 .list-team {
   display: flex;
-  flex-direction: row;
 }
 .team-card {
   background-color: var(--bg-main-color);
@@ -206,10 +234,12 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   width: 270px;
-  height: 368px;
 }
 .team-card:not(:last-child) {
   margin-right: 30px;
+}
+.team-card-down-part {
+  padding: 30px;
 }
 .title-team {
   margin-bottom: 50px;
@@ -219,17 +249,30 @@ body {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
 }
 .text-team {
+  font-size: 16px;
+  line-height: 1.19;
   text-align: center;
 }
 /*==================portfolio===================== */
 .filter {
   margin-bottom: 34px;
 }
+.filter {
+  display: flex;
+  justify-content: center;
+}
+.item-filter:not(:last-child) {
+  margin-right: 8px;
+}
 .filter .button {
-  background: var(--bg-light-color);
+  padding: 6px 22px;
+  display: block;
+  border-radius: 4px;
+  border-color: var(--bg-light-color);
+  background-color: var(--bg-light-color);
   font-weight: 500;
   line-height: 1.63;
   letter-spacing: 0.03em;
@@ -238,6 +281,23 @@ body {
 .filter .button:focus {
   background-color: var(--bg-accent-color);
   color: var(--light-color);
+}
+.list-example {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item-example:not(:nth-child(3n + 3)) {
+  margin-right: 30px;
+}
+.item-example:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+.item-example {
+  width: 370px;
+  border: 1px solid var(--border-card-color);
+}
+.example-card-part-down {
+  padding: 20px 24px;
 }
 .title-example {
   margin-bottom: 4px;
