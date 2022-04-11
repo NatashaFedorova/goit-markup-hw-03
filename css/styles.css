@@ -160,7 +160,6 @@ body {
 .title-btn {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 0 auto;
   max-width: max-content;
@@ -176,7 +175,6 @@ body {
   text-transform: uppercase;
 }
 .hero .button {
-  display: block;
   height: 50px;
   min-width: 200px;
   border-color: var(--bg-accent-color);
