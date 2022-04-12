@@ -157,14 +157,8 @@ body {
   padding-bottom: 200px;
   background-color: var(--bg-dark-color);
 }
-.title-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  max-width: max-content;
-}
-.hero .title {
+
+.hero-title {
   color: var(--light-color);
   margin-bottom: var(--main-gap);
   max-width: 696px;
@@ -173,8 +167,12 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-.hero .button {
+.hero-button {
+  display: block;
   height: 50px;
   min-width: 200px;
   border-color: var(--bg-accent-color);
@@ -185,9 +183,11 @@ body {
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  margin-left: auto;
+  margin-right: auto;
 }
-.hero .button:hover,
-.hero .button:focus {
+.hero-button:hover,
+.hero-button:focus {
   border-color: var(--bg-accent-color);
   background-color: var(--bg-accent-button-color);
 }
@@ -259,7 +259,7 @@ body {
 /*==================portfolio===================== */
 
 .filter {
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .filter {
   display: flex;
